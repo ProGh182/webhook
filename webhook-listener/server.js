@@ -5,6 +5,8 @@ import "dotenv/config";
 
 const app = express();
 
+// Webhook listener for GitHub - Auto deployment enabled
+
 // IMPORTANT : pour vérifier les signatures GitHub, vous devez utiliser
 // les *octets bruts* du corps de la requête.
 app.post("/webhook/github", express.raw({ type: "*/*" }), async (req, res) => {
